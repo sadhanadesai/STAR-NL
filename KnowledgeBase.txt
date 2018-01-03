@@ -1,0 +1,170 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:sen="platform:/resource/JenaTrial/src/EnOntology.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="platform:/resource/JenaTrial/src/EnglishGrammer">
+    <owl:versionInfo>
+	    	Created By Nikhil Gore on 16/01/2017
+	    </owl:versionInfo>
+  </owl:Ontology>
+  <owl:Class rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence"/>
+  <owl:Class rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Adjective">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#hasWord">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#of">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:label>at</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#to">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:label>to</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#BUT">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence"/>
+    <rdfs:label>or</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#or">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:label>or</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Predicate_Text">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Object">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain>
+      <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Predicate"/>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#on">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:label>on</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Adverb">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#after">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:label>at</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Subject">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain>
+      <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Predicate"/>
+    </rdfs:domain>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#into">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:label>to</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#ContinuePredicate">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Conjugate">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:label>and</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#at">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:label>at</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Predicate">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence"/>
+    <rdfs:subClassOf rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#BECAUSE">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence"/>
+    <rdfs:label>or</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#AND">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence"/>
+    <rdfs:label>or</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#for">
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:label>on</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#POS">
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Word_Clause">
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Word_Text">
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Tense">
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Causes">
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence"/>
+    <rdfs:range rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence_Text">
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Sentence"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#NER">
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#Is_Plural">
+    <rdfs:domain rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <rdf:Description rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#1">
+    <sen:Predicate>
+      <rdf:Description rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#1_2">
+        <sen:Object>
+          <rdf:Description rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#1_3">
+            <sen:Word_Clause>X. </sen:Word_Clause>
+            <sen:POS>NNP</sen:POS>
+            <sen:Word_Text>X.</sen:Word_Text>
+          </rdf:Description>
+        </sen:Object>
+        <sen:Subject>
+          <rdf:Description rdf:about="platform:/resource/JenaTrial/src/EnOntology.owl#1_1">
+            <sen:Word_Clause>Nikhil </sen:Word_Clause>
+            <sen:POS>NNP</sen:POS>
+            <sen:Word_Text>NIKHIL</sen:Word_Text>
+          </rdf:Description>
+        </sen:Subject>
+        <sen:Word_Clause>Nikhil met X. </sen:Word_Clause>
+        <sen:POS>VBD</sen:POS>
+        <sen:Word_Text>MEET</sen:Word_Text>
+      </rdf:Description>
+    </sen:Predicate>
+    <sen:Tense>Past</sen:Tense>
+    <sen:Sentence_Text>Nikhil met X.</sen:Sentence_Text>
+  </rdf:Description>
+</rdf:RDF>

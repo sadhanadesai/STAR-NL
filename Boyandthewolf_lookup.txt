@@ -1,0 +1,17 @@
+[Ram]-p-1
+[the, farmers]-p-2
+[a, village]-t-1
+[a, hundred, sheep]-t-2
+[sheep]-t-2
+[pastures]-t-2
+[a, big, banyan, tree]-t-1
+[books]-t-2
+[lunch]-t-1
+[the, sheep]-t-2
+[a, prank]-t-1
+[a, tree]-t-1
+[a, wolf]-t-1
+[the, banyan, tree]-t-1
+[the, wolf]-t-1
+[home]-t-1
+[a, lesson]-t-1

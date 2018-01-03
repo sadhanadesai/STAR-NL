@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xml:base   = "platform:/resource/JenaTrial/src/EnOntology.owl#"
+	xmlns:rdf  = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:sen  = "platform:/resource/JenaTrial/src/EnOntology.owl#"
+    xmlns:owl  = "http://www.w3.org/2002/07/owl#"
+    xmlns:xsd  = "http://www.w3.org/2001/XMLSchema#"
+    xmlns:daml = "http://www.daml.org/2001/03/daml+oil#"
+    xmlns:rdfs = "http://www.w3.org/2000/01/rdf-schema#">
+
+	<owl:Ontology rdf:about="EnglishGrammer">
+	    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+	    	Created By Nikhil Gore on 16/01/2017
+	    </owl:versionInfo>
+	</owl:Ontology>
+	
+	<owl:Class rdf:ID="Sentence"/>
+	<owl:Class rdf:ID="Word"/>
+	
+	<owl:Class rdf:ID="Predicate">
+		<rdfs:subClassOf rdf:resource="platform:/resource/JenaTrial/src/EnOntology.owl#Word"/>
+	</owl:Class>
+	
+	<owl:DatatypeProperty rdf:ID="Sentence_Text">
+		<rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    	<rdfs:domain rdf:resource="#Sentence"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:ID="Is_Plural">
+		<rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    	<rdfs:domain rdf:resource="#Word"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:ID="Tense">
+		<rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    	<rdfs:domain rdf:resource="#Sentence"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:ID="Causes">
+		<rdfs:range  rdf:resource="#Sentence"/>
+    	<rdfs:domain rdf:resource="#Sentence"/>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:ID="Subject">
+		<rdfs:domain rdf:resource="#Predicate"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="Object">
+		<rdfs:domain rdf:resource="#Predicate"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="Predicate">
+		<rdfs:domain rdf:resource="#Sentence"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="ContinuePredicate">
+		<rdfs:domain rdf:resource="#Sentence"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+		
+	<owl:ObjectProperty rdf:ID="Predicate_Text">
+		<rdfs:domain rdf:resource="#Sentence"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	</owl:ObjectProperty>
+		
+	<owl:ObjectProperty rdf:ID="hasWord">
+		<rdfs:domain rdf:resource="#Sentence"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:ID="Word_Text">
+		<rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    	<rdfs:domain rdf:resource="#Word"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:ID="Word_Clause">
+		<rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    	<rdfs:domain rdf:resource="#Word"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:ID="POS">
+		<rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    	<rdfs:domain rdf:resource="#Word"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:ID="NER">
+		<rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    	<rdfs:domain rdf:resource="#Word"/>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:ID="Adjective">
+		<rdfs:domain rdf:resource="#Word"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="Adverb">
+		<rdfs:domain rdf:resource="#Word"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="on">
+		<rdfs:label  rdf:datatype="http://www.w3.org/2001/XMLSchema#string">on</rdfs:label>
+		<rdfs:domain rdf:resource="#Word"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="for">
+		<rdfs:label  rdf:datatype="http://www.w3.org/2001/XMLSchema#string">on</rdfs:label>
+		<rdfs:domain rdf:resource="#Word"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="of">
+		<rdfs:label  rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at</rdfs:label>
+		<rdfs:domain rdf:resource="#Word"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="at">
+		<rdfs:label  rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at</rdfs:label>
+		<rdfs:domain rdf:resource="#Word"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="after">
+		<rdfs:label  rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at</rdfs:label>
+		<rdfs:domain rdf:resource="#Word"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="to">
+		<rdfs:label  rdf:datatype="http://www.w3.org/2001/XMLSchema#string">to</rdfs:label>
+		<rdfs:domain rdf:resource="#Word"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="into">
+		<rdfs:label  rdf:datatype="http://www.w3.org/2001/XMLSchema#string">to</rdfs:label>
+		<rdfs:domain rdf:resource="#Word"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="Conjugate">
+		<rdfs:label  rdf:datatype="http://www.w3.org/2001/XMLSchema#string">and</rdfs:label>
+		<rdfs:domain rdf:resource="#Word"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="or">
+		<rdfs:label  rdf:datatype="http://www.w3.org/2001/XMLSchema#string">or</rdfs:label>
+		<rdfs:domain rdf:resource="#Word"/>
+		<rdfs:range rdf:resource="#Word"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="BECAUSE">
+		<rdfs:label  rdf:datatype="http://www.w3.org/2001/XMLSchema#string">or</rdfs:label>
+		<rdfs:domain rdf:resource="#Sentence"/>
+		<rdfs:range rdf:resource="#Sentence"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="AND">
+		<rdfs:label  rdf:datatype="http://www.w3.org/2001/XMLSchema#string">or</rdfs:label>
+		<rdfs:domain rdf:resource="#Sentence"/>
+		<rdfs:range rdf:resource="#Sentence"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:ID="BUT">
+		<rdfs:label  rdf:datatype="http://www.w3.org/2001/XMLSchema#string">or</rdfs:label>
+		<rdfs:domain rdf:resource="#Sentence"/>
+		<rdfs:range rdf:resource="#Sentence"/>
+	</owl:ObjectProperty>
+</rdf:RDF>

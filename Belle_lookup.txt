@@ -1,0 +1,4 @@
+[Belle]-p-1
+[The, craftsman]-p-1
+[the, craftsman]-p-1
+[a, castle]-t-1

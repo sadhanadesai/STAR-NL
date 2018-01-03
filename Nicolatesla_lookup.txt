@@ -1,0 +1,6 @@
+[Nikola, Tesla]-p-1
+[Tesla]-p-1
+[Smiljan]-t-1
+[the, first, job]-t-1
+[first, job]-t-1
+[7, January, 1943]-t-1
